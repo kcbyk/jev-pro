@@ -208,6 +208,20 @@ birebir; int8 altın doğruluk **0.9400→0.9400** (düşüş yok), sunucuyla to
 vakalarda Δsoftmax>0.05 ~%8, wasm float sırası gürültüsü, bundle'ın herkese açıklığı)
 `web/README.md`'de.
 
+## Lisans (ticari kullanım ücretli)
+
+Bu depo **MIT değil**. `LICENSE` dosyasına göre: kişisel/akademik/gelirsiz kullanım
+bedava (atıfla); **para kazanan her şey** — gömülü oyun, SaaS, başkasına ağırlık
+verme — yazılı lisans + ücret gerektirir. Taban modellerin bildirimleri (MiniLM MIT,
+Banking77 Apache-2.0) LICENSE 6. maddede duruyor; permissif lisanslar türevin
+kendi koşullarınla dağıtılmasına izin verdiği için bu yapı hukuki olarak temiz.
+
+**Teknik dürüstlük notu:** `web/` bundle'ı tarayıcıda koştuğu için ağırlıkları
+indiren model dosyalarını da indirir — bariyer burada **hukuki**, teknik değil.
+Teknik zorunluluk istersen model ağırlığını hiç verme: API yolu (`serve_pro.py` +
+`keys.json`) yalnızca cevap döner, modeli geri vermez; anahtar iptali = erişim kesme.
+Kısacası: tarayıcı-modu = lisansla korunan, API-modu = erişimle korunan.
+
 ## API anahtarları (çoklu key)
 
 `keys.json` = `{"<anahtar>": "proje-etiketi", ...}` — her projeye ayrı anahtar ver,

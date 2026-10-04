@@ -75,7 +75,10 @@ iki CDN URL'sini yerel dosyayla değiştir.
   bandı genişlet.
 - ORT-WASM'nin float toplama sırası python'dan farklı → ~1e-7'lik gürültü (RH-9 dersi:
   eşitlik testleri kaba toleranslı olsun).
-- Model herkese açık olur: bundle'ı indiren ağırlıkları da indirir (MIT/Apache taban —
-  sorun değil ama bilerek paylaş).
+- Model dosyaları tarayıcıdan indirilebilir: bundle'ı ziyaret eden ağırlıkları da
+  indirir. Bu artık **lisans meselesi** (kökteki LICENSE: ticari kullanım ücretli) —
+  bundle'ı halka açık siteye koyan herkes 3(b) maddesine girer; kendi projende
+  gömersin ama kopyalayıp dağıtamazlar. Teknik kilit istersen web bundle yerine
+  API yolunu kullan (ağırlık hiç gitmez, cevap gider).
 - `test_pro`/`qa_flow` kapılarından geçmiş gerçek referans **sunucu** yollarıdır;
   web yolu onların int8-izinli türevidir.

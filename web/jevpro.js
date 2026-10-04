@@ -1,4 +1,6 @@
 // jevpro.js — jev-pro model API'si, tek dosya, sıfır build adımı.
+// LİSANS: Ticari kullanım (gelirli ürün, barındırma, dağıtım) yazılı lisans + ücret
+// gerektirir — kök depodaki LICENSE dosyası. Kişisel/gelirsiz kullanım serbest.
 //
 // Asset'ler (hepsi `base` yolunda; site kökü varsayılan):
 //   encoder_int8.onnx · tokenizer.json · head.json · head.bin

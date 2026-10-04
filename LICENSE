@@ -1,0 +1,52 @@
+JEV-PRO MODEL & KOD LİSANSI (Proprietary — ticari kullanım ücretli)
+Copyright (c) 2026 kcbyk. Tüm hakları saklıdır / All rights reserved.
+
+1. KAPSAM
+   Bu lisans, bu depodaki JEV-PRO'ya ait TÜM fikri mülkiyeti kapsar:
+   - fine-tune edilmiş model ağırlıkları ve head dosyaları (ft_state*.pt, head.*, .onnx),
+   - eğitim/sunucu/istemci kodu (serve_pro.py, jevpro.js, client.mjs, export_web.py, ...),
+   - dokümantasyon ve bundle dosyaları.
+
+2. TİCARİ OLMAYAN KULLANIM — ÜCRETSİZ
+   Eğitim, kişisel proje, akademik çalışma ve ticari geliri olmayan demo/oyunlar için
+   kullanım serbesttir (atıf ile). "Ticari olmayan": üründen/eşyadan hiçbir gelir
+   elde edilmiyor olması (reklam, IAP, ücretli erişim, sponsorlu yayın dâhil).
+
+3. TİCARİ KULLANIM — LİSANS ÜCRETİ GEREKİR
+   Aşağıdakilerden HERHANGİ BİRİ ticari kullanım sayılır ve yazılı lisans + ücret
+   gerektirir:
+     a) Modeli/ağırlıkları bir üründe sunmak (oyun, uygulama, SaaS, bot) — model
+        oyuncunun tarayıcısında koşsa bile (web bundle dâhil),
+     b) Modeli barındırmak veya başkalarının erişimine açmak (API, CDN, repo, release),
+     c) Ağırlıkları, tokenizer/head dosyalarını veya ONNX türevlerini üçüncü tarafa
+        vermek (hediye/deneme dâhil; NDA'lı iş ortağı istisna: lisans sözleşmesinde
+        ayrıca belirtilir).
+   Lisans bedeli ve kapsamı için: GitHub üzerinden @kcbyk ile iletişime geç.
+
+4. YASAKLAR
+   - Lisans ücreti ödenmeden yukarıdaki 3. madde faaliyetlerinde bulunmak.
+   - Bu lisans metnini veya telif bildirlerini dosyalardan silmek/değiştirmek.
+   - Model çıktısını, eğitildiği Banking77 etiket verisini topluca yeniden üretecek
+     şekilde etiket-dampingleme (label-dumping) amacıyla kullanmak.
+
+5. FERAGAT (WARRANTY)
+   Model "OLDUĞU GİBİ" sunulur; hiçbir garanti yoktur. Sınıflandırıcı bir tahmin
+   makinesidir; kritik iş kararlarında sorumluluk kullanıcıya aittir.
+
+6. ÜÇÜNCÜ TARAF BİLDİRİMLERİ (silinemez)
+   Bu projenin türetildiği açık kaynak bileşenler kendi lisanslarıyla gelir:
+     - sentence-transformers/all-MiniLM-L6-v2 (base model): MIT License
+       Copyright (c) The sentence-transformers authors
+     - polyAI/banking77 dataset: Apache License 2.0
+   Lisanslarımız permissiftir: türev work (fine-tune ağırlıkları + bu depo kodu)
+   telif sahibinin seçtiği koşullar altında dağıtılabilir — bu dosyanın 2-4.
+   maddeleri meşrudur; yukarıdaki telif bildirimlerinin korunması şartıyla.
+
+Türkçe özet: kişisel/üniversite işleri bedava; PARA KAZANAN HER ŞEY (oyun, site,
+API, başkasına verme) ücretli lisansa tabi. Bedava model arayan için cap'i yüksek
+açık modeller var — bu proje o havuzda değil.
+
+English summary: non-commercial use free with attribution; ANY commercial use —
+including browser-side embedding, hosted APIs, or redistribution of weights —
+requires a paid license from the copyright holder. Upstream notices (MiniLM MIT,
+Banking77 Apache-2.0) are preserved and their licenses permit this.
