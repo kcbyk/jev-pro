@@ -1,0 +1,16 @@
+  [PASS] GET /health: labels=77 noul=['is_card', 'is_transfer', 'is_topup']
+  [PASS] probabilities sum to 1: |Σ-1| = 2.0e-04
+  [PASS] served pick == argmax of served probabilities: card_about_to_expire
+  choice (77 options)   acc 0.9288   ECE 0.0197   conf-acc +0.8 pts   cov@95 0.95   cov@99 0.60   p50 13.9 ms
+  published Jev 1.13  acc 0.803                     conf-acc ~+13.9 pts   cov@95 0.00   p50 310 ms
+  [PASS] endpoint accuracy beats Jev's published 80.3% by >5 pts: got 0.9288
+  [PASS] endpoint ECE under 0.05 (usable thresholds): 0.0197
+  [PASS] mean confidence within 3 pts of accuracy: +0.8 pts
+  [PASS] share auto-acceptable at 95% accuracy above 0.7: 0.95 (Jev: 0.00)
+  [PASS] median latency under 30 ms (Jev p50 310 ms): 13.9 ms
+  [PASS] noul is_card balanced accuracy > 0.85: 0.9586
+  [PASS] noul is_card positive-class F1 > 0.55: 0.9323
+  [PASS] noul is_transfer balanced accuracy > 0.85: 0.9451
+  [PASS] noul is_transfer positive-class F1 > 0.55: 0.8974
+  [PASS] noul is_topup balanced accuracy > 0.85: 0.9737
+  [PASS] noul is_topup positive-class F1 > 0.55: 0.9730

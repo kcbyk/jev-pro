@@ -1,0 +1,20 @@
+jev-pro fine-tuned  all-MiniLM-L6-v2 (22.7M params, trainable, CPU, 2 threads)
+fit=24000 val=1993 test=3076 classes=77 epochs=6 best_epoch=6
+
+  test accuracy            0.9288   (T=1.0 gives 0.9288; temperature only rescales)
+  macro F1                 0.9288
+  top-3 accuracy           0.9811
+  ECE after calibration    0.0197   (before: 0.0197)
+  mean confidence - accuracy  +0.8 pts
+  share auto-acceptable at 95% accuracy   0.95
+  share auto-acceptable at 99% accuracy   0.60
+  latency per decision     9.2 ms  (median, single example, CPU)
+
+  published comparators on this exact split:
+    Jev 1.13 zero-shot typed Choice ......... 0.803  @ p50 310 ms   (jevbench.xyz)
+    Jev 1.13 with 24 retrieved examples ..... 0.9240               (simonmesmith)
+    fine-tuned BERT (2020 paper) ............ 0.9366
+    22M encoder + logistic head (frozen) .... 0.932  @ 8 ms        (mindstudio)
+    Kev-9B (open, trained on this data) ..... 0.825 on a 154-sample set
+
+  training history: [{"epoch": 1, "loss": 1.8660690867900849, "val_acc": 0.8208730556949323, "secs": 318.6}, {"epoch": 2, "loss": 0.6105189478000005, "val_acc": 0.8926241846462619, "secs": 302.9}, {"epoch": 3, "loss": 0.4974182930787404, "val_acc": 0.9086803813346713, "secs": 289.5}, {"epoch": 4, "loss": 0.45498445467154186, "val_acc": 0.9157049673858505, "secs": 296.7}, {"epoch": 5, "loss": 0.43530560688177744, "val_acc": 0.9187155042649272, "secs": 291.9}, {"epoch": 6, "loss": 0.4297503776152929, "val_acc": 0.9197190165579529, "secs": 310.6}]

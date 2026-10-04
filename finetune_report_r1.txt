@@ -1,0 +1,20 @@
+jev-pro fine-tuned  all-MiniLM-L6-v2 (22.7M params, trainable, CPU, 2 threads)
+fit=8000 val=1993 test=3076 classes=77 epochs=4 best_epoch=4
+
+  test accuracy            0.9109   (T=1.0 gives 0.9109; temperature only rescales)
+  macro F1                 0.9109
+  top-3 accuracy           0.9805
+  ECE after calibration    0.0144   (before: 0.0489)
+  mean confidence - accuracy  +0.4 pts
+  share auto-acceptable at 95% accuracy   0.93
+  share auto-acceptable at 99% accuracy   0.72
+  latency per decision     10.6 ms  (median, single example, CPU)
+
+  published comparators on this exact split:
+    Jev 1.13 zero-shot typed Choice ......... 0.803  @ p50 310 ms   (jevbench.xyz)
+    Jev 1.13 with 24 retrieved examples ..... 0.9240               (simonmesmith)
+    fine-tuned BERT (2020 paper) ............ 0.9366
+    22M encoder + logistic head (frozen) .... 0.932  @ 8 ms        (mindstudio)
+    Kev-9B (open, trained on this data) ..... 0.825 on a 154-sample set
+
+  training history: [{"epoch": 1, "loss": 2.6620813822746277, "val_acc": 0.696939287506272, "secs": 113.4}, {"epoch": 2, "loss": 0.9466448290348053, "val_acc": 0.875062719518314, "secs": 110.4}, {"epoch": 3, "loss": 0.7277988703250885, "val_acc": 0.8956347215253387, "secs": 101.9}, {"epoch": 4, "loss": 0.6754833703041077, "val_acc": 0.9051680883090818, "secs": 103.1}]

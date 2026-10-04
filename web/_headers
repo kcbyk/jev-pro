@@ -1,0 +1,25 @@
+# Cloudflare Pages: tüm siteye CORS (başka origin'den import edilebilsin),
+# ağır asset'lere ömür boyu cache (dosya adları içerik-hash'li tutulmayacaksa
+# versiyon klasörü kullan: /v1/jevpro.js gibi).
+/*
+  Access-Control-Allow-Origin: *
+
+/encoder_int8.onnx
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable
+
+/tokenizer.json
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable
+
+/head.json
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable
+
+/head.bin
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable
+
+/jevpro.js
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600

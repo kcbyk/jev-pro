@@ -1,0 +1,17 @@
+[Unit]
+Description=jev-pro intent model (77-label + noul heads)
+After=network-online.target
+
+[Service]
+Type=simple
+User=jev
+WorkingDirectory=/opt/jev-pro
+ExecStart=/opt/jev-pro/.venv/bin/python3 /opt/jev-pro/serve_pro.py --port 8100 --model-dir jev-pro-model-r3w2 --state jev-pro-model-r3w2/ft_state_fp16.pt --keys /opt/jev-pro/keys.json --allow-origin https://oyunum.ornek.com
+Restart=always
+RestartSec=2
+MemoryMax=1G
+Environment=OMP_NUM_THREADS=2
+Environment=HF_HUB_OFFLINE=1
+
+[Install]
+WantedBy=multi-user.target

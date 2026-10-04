@@ -1,0 +1,33 @@
+  [PASS] GET /health: labels=77 noul=['is_card', 'is_transfer', 'is_topup']
+
+measuring on 3076 official-test messages through HTTP
+
+  [PASS] probabilities sum to 1: |Σ-1| = 6.0e-04
+  [PASS] served pick == argmax of served probabilities: card_about_to_expire
+
+  choice (77 options)   acc 0.9275   ECE 0.0141   conf-acc +1.0 pts   cov@95 0.96   cov@99 0.61   p50 14.1 ms
+  published Jev 1.13  acc 0.803                     conf-acc ~+13.9 pts   cov@95 0.00   p50 310 ms
+  [PASS] endpoint accuracy beats Jev's published 80.3% by >5 pts: got 0.9275
+  [PASS] endpoint ECE under 0.05 (usable thresholds): 0.0141
+  [PASS] mean confidence within 3 pts of accuracy: +1.0 pts
+  [PASS] share auto-acceptable at 95% accuracy above 0.7: 0.96 (Jev: 0.00)
+  [PASS] median latency under 30 ms (Jev p50 310 ms): 14.1 ms
+
+noul propositions (same endpoint, same call):
+  is_card      acc 0.9650 (majority-only 0.6800)  balanced 0.9660  pos-F1 0.9466 (TPR 0.97/TNR 0.96)  Brier 0.0328  errors 0
+  [PASS] noul is_card balanced accuracy > 0.85: 0.9660
+  [PASS] noul is_card positive-class F1 > 0.55: 0.9466
+  is_transfer  acc 0.9600 (majority-only 0.8100)  balanced 0.9552  pos-F1 0.9000 (TPR 0.95/TNR 0.96)  Brier 0.0326  errors 0
+  [PASS] noul is_transfer balanced accuracy > 0.85: 0.9552
+  [PASS] noul is_transfer positive-class F1 > 0.55: 0.9000
+  is_topup     acc 0.9800 (majority-only 0.9050)  balanced 0.9418  pos-F1 0.8947 (TPR 0.89/TNR 0.99)  Brier 0.0154  errors 0
+  [PASS] noul is_topup balanced accuracy > 0.85: 0.9418
+  [PASS] noul is_topup positive-class F1 > 0.55: 0.8947
+
+request handling:
+  [PASS] case/underscore variants of intent names accepted: Exchange Rate
+  [PASS] unknown option name -> 400 with nearest-intent hint: {"error": {"message": "no answerable question", "details": {"intent": "unknown option(s) ['does_not_exist_intent', 'anot
+  [PASS] untrained proposition -> 400 that lists what exists: {"error": {"message": "no answerable question", "details": {"q": "no noul head for 'Is the customer thinking about lunch
+  [PASS] mixed choice+noul in a single call: latency 27.22 ms
+
+ALL CHECKS PASSED

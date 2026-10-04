@@ -1,0 +1,180 @@
+{
+  "labels": [
+    "Refund_not_showing_up",
+    "activate_my_card",
+    "age_limit",
+    "apple_pay_or_google_pay",
+    "atm_support",
+    "automatic_top_up",
+    "balance_not_updated_after_bank_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "beneficiary_not_allowed",
+    "cancel_transfer",
+    "card_about_to_expire",
+    "card_acceptance",
+    "card_arrival",
+    "card_delivery_estimate",
+    "card_linking",
+    "card_not_working",
+    "card_payment_fee_charged",
+    "card_payment_not_recognised",
+    "card_payment_wrong_exchange_rate",
+    "card_swallowed",
+    "cash_withdrawal_charge",
+    "cash_withdrawal_not_recognised",
+    "change_pin",
+    "compromised_card",
+    "contactless_not_working",
+    "country_support",
+    "declined_card_payment",
+    "declined_cash_withdrawal",
+    "declined_transfer",
+    "direct_debit_payment_not_recognised",
+    "disposable_card_limits",
+    "edit_personal_details",
+    "exchange_charge",
+    "exchange_rate",
+    "exchange_via_app",
+    "extra_charge_on_statement",
+    "failed_transfer",
+    "fiat_currency_support",
+    "get_disposable_virtual_card",
+    "get_physical_card",
+    "getting_spare_card",
+    "getting_virtual_card",
+    "lost_or_stolen_card",
+    "lost_or_stolen_phone",
+    "order_physical_card",
+    "passcode_forgotten",
+    "pending_card_payment",
+    "pending_cash_withdrawal",
+    "pending_top_up",
+    "pending_transfer",
+    "pin_blocked",
+    "receiving_money",
+    "request_refund",
+    "reverted_card_payment?",
+    "supported_cards_and_currencies",
+    "terminate_account",
+    "top_up_by_bank_transfer_charge",
+    "top_up_by_card_charge",
+    "top_up_by_cash_or_cheque",
+    "top_up_failed",
+    "top_up_limits",
+    "top_up_reverted",
+    "topping_up_by_card",
+    "transaction_charged_twice",
+    "transfer_fee_charged",
+    "transfer_into_account",
+    "transfer_not_received_by_recipient",
+    "transfer_timing",
+    "unable_to_verify_identity",
+    "verify_my_identity",
+    "verify_source_of_funds",
+    "verify_top_up",
+    "virtual_card_not_working",
+    "visa_or_mastercard",
+    "why_verify_identity",
+    "wrong_amount_of_cash_received",
+    "wrong_exchange_rate_for_cash_withdrawal"
+  ],
+  "report": {
+    "logreg": {
+      "val_acc": 0.8740592072252885,
+      "val_ece": 0.01962506755858815,
+      "T": 0.55
+    },
+    "mlp": {
+      "val_acc": 0.8033115905669844,
+      "val_ece": 0.028828104067947696,
+      "T": 1.05
+    },
+    "knn": {
+      "val_acc": 0.9116909182137481,
+      "val_ece": 0.07114950765204946,
+      "T": 2.75
+    },
+    "zero_shot_names": {
+      "val_acc": 0.5930757651781234,
+      "val_ece": 0.030139479096427495,
+      "T": 1.25
+    },
+    "ensemble": {
+      "val_acc": 0.9031610637230306,
+      "val_ece": 0.09176943728149248,
+      "T": 1.0
+    }
+  },
+  "test": {
+    "zero_shot_names": {
+      "acc": 0.6219115734720416,
+      "macro_f1": 0.6112197065873205,
+      "ece": 0.031896428408534766,
+      "brier": 0.5052223801612854,
+      "T": 1.25,
+      "conf_minus_acc_pts": -3.0274925231933594,
+      "coverage": {
+        "0.95": 0.3072171651495449,
+        "0.99": 0.09135240572171652
+      }
+    },
+    "logreg": {
+      "acc": 0.8052665799739922,
+      "macro_f1": 0.8064555255527436,
+      "ece": 0.05410056147219933,
+      "brier": 0.29191680414774307,
+      "T": 0.55,
+      "conf_minus_acc_pts": 4.203184363297083,
+      "coverage": {
+        "0.95": 0.3273732119635891,
+        "0.99": 0.11150845253576072
+      }
+    },
+    "mlp": {
+      "acc": 0.8182704811443433,
+      "macro_f1": 0.8171031484776146,
+      "ece": 0.037173185712109966,
+      "brier": 0.2730832210028701,
+      "T": 1.05,
+      "conf_minus_acc_pts": -3.5084844132624795,
+      "coverage": {
+        "0.95": 0.618335500650195,
+        "0.99": 0.14661898569570872
+      }
+    },
+    "knn": {
+      "acc": 0.9232769830949284,
+      "macro_f1": 0.9231265180366741,
+      "ece": 0.06370604100351202,
+      "brier": 0.13735867552737827,
+      "T": 2.75,
+      "conf_minus_acc_pts": -6.335060557157135,
+      "coverage": {
+        "0.95": 0.9496098829648895,
+        "0.99": 0.0
+      }
+    },
+    "ensemble": {
+      "acc": 0.915149544863459,
+      "macro_f1": 0.9149569971866585,
+      "ece": 0.12829760207982194,
+      "brier": 0.16491665267875835,
+      "T": 1.0,
+      "conf_minus_acc_pts": -12.821278138589648,
+      "coverage": {
+        "0.95": 0.9245773732119635,
+        "0.99": 0.6284135240572172
+      }
+    }
+  },
+  "jev_reference": {
+    "jevbench_accuracy": 0.803,
+    "jevbench_p50_ms": 310.0,
+    "jev_overconf_pts": 13.9,
+    "jev_coverage95": 0.0,
+    "kev9b_accuracy": 0.825,
+    "published_lr_head": 0.932,
+    "published_bert": 0.9366
+  },
+  "best_head": "knn"
+}

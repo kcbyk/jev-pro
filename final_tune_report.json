@@ -1,0 +1,46 @@
+{
+ "rows": [
+  {
+   "model": "r3w head single-pass (T=0.75)",
+   "acc": 0.935,
+   "top3": 0.9828,
+   "top5": 0.9922,
+   "ece": 0.0355,
+   "conf_minus_acc_pts": 3.4,
+   "cov95": 0.97,
+   "cov99": 0.7
+  },
+  {
+   "model": "r3w head + TTA (val-T)",
+   "acc": 0.934,
+   "top3": 0.9831,
+   "top5": 0.9925,
+   "ece": 0.038,
+   "conf_minus_acc_pts": 3.3,
+   "cov95": 0.97,
+   "cov99": 0.72
+  },
+  {
+   "model": "r3w TTA blend knn+centroid",
+   "acc": 0.9337,
+   "top3": 0.9834,
+   "top5": 0.9925,
+   "ece": 0.0369,
+   "conf_minus_acc_pts": 3.4,
+   "cov95": 0.97,
+   "cov99": 0.69
+  }
+ ],
+ "Tv": 0.7620253164556963,
+ "Tk": 2.4443037974683546,
+ "Tcv": 0.9822784810126584,
+ "Tb": 0.9746835443037976,
+ "k": 32,
+ "w_knn": 0.05,
+ "w_cent": 0.0,
+ "val": {
+  "head_tta": 0.9814350225790266,
+  "blend": 0.9814350225790266
+ },
+ "seconds": 39.1
+}

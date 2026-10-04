@@ -1,0 +1,14 @@
+measuring on 3076 official-test messages through HTTP
+
+  [PASS] probabilities sum to 1: |Σ-1| = 6.0e-04
+  [PASS] served pick == argmax of served probabilities: card_about_to_expire
+
+  choice (77 options)   acc 0.9275   ECE 0.0141   conf-acc +1.0 pts   cov@95 0.96   cov@99 0.61   p50 14.8 ms
+  published Jev 1.13  acc 0.803                     conf-acc ~+13.9 pts   cov@95 0.00   p50 310 ms
+  [PASS] endpoint accuracy beats Jev's published 80.3% by >5 pts: got 0.9275
+  [PASS] endpoint ECE under 0.05 (usable thresholds): 0.0141
+  [PASS] mean confidence within 3 pts of accuracy: +1.0 pts
+  [PASS] share auto-acceptable at 95% accuracy above 0.7: 0.96 (Jev: 0.00)
+  [PASS] median latency under 30 ms (Jev p50 310 ms): 14.8 ms
+
+noul propositions (same endpoint, same call):

@@ -1,0 +1,73 @@
+{
+ "rows": [
+  {
+   "model": "r2 single head (in r2 space)",
+   "acc": 0.9275,
+   "top3": 0.9785,
+   "top5": 0.9902,
+   "ece": 0.0137,
+   "conf_minus_acc_pts": 0.9,
+   "cov95": 0.96,
+   "cov99": 0.61
+  },
+  {
+   "model": "multi-seed head ensemble",
+   "acc": 0.9321,
+   "top3": 0.9795,
+   "top5": 0.9889,
+   "ece": 0.0232,
+   "conf_minus_acc_pts": 2.2,
+   "cov95": 0.96,
+   "cov99": 0.69
+  },
+  {
+   "model": "kNN k=16 on ft embeddings",
+   "acc": 0.9304,
+   "top3": 0.9681,
+   "top5": 0.9694,
+   "ece": 0.0365,
+   "conf_minus_acc_pts": 3.6,
+   "cov95": 0.96,
+   "cov99": 0.31
+  },
+  {
+   "model": "boost blend (this run)",
+   "acc": 0.9314,
+   "top3": 0.9818,
+   "top5": 0.9915,
+   "ece": 0.0196,
+   "conf_minus_acc_pts": 1.9,
+   "cov95": 0.97,
+   "cov99": 0.75
+  },
+  {
+   "model": "boost blend, geometric mean",
+   "acc": 0.9308,
+   "top3": 0.9821,
+   "top5": 0.9909,
+   "ece": 0.0388,
+   "conf_minus_acc_pts": 3.9,
+   "cov95": 0.96,
+   "cov99": 0.74
+  },
+  {
+   "model": "label-desc reranker alone",
+   "acc": 0.8726,
+   "top3": 0.948,
+   "top5": 0.9665,
+   "ece": 0.7282,
+   "conf_minus_acc_pts": -72.8,
+   "cov95": 0.76,
+   "cov99": 0.01
+  }
+ ],
+ "knn_k": 16,
+ "w_knn": 0.15000000000000002,
+ "w_centroid": 0.25,
+ "w_desc": 0.0,
+ "T_head": 0.689873417721519,
+ "T_blend": 0.9822784810126584,
+ "aug": true,
+ "desc": true,
+ "seconds": 118.3
+}

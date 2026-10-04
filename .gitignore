@@ -1,0 +1,14 @@
+# sırlar — ASLA commit yok; keys.example.json şablonunu kopyala
+keys.json
+nohup.out
+
+# türetilmiş önbellekler (export_web.py / embed.py yeniden üretir)
+__pycache__/
+*.pyc
+*.log
+/emb_*.npy
+
+# bozuk indirme artıkığı (14 b) — kanonik kaynak data/*.jsonl ve *.parquet
+data/*.csv
+
+web/node_modules/
